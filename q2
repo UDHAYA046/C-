@@ -1,0 +1,18 @@
+
+#include<stdio.h>
+main(){
+    char name[30],city[30]; /* 30 is the maximum possible number of  chaarcter */
+    int doornum,streetnum,pincode;
+    printf("enter your name : ");
+    scanf("%29s",name); /* we put one less for null pointer and hence also dont use & while referring to the variable
+    printf("enter your city : ");
+    scanf("%29s",city);
+    printf("enter your doornum : ");
+    scanf("%d",&doornum);
+    printf("enter your streetnum : ");
+    scanf("%d",&streetnum);
+    printf("enter your pincode : ");
+    scanf("%d",&pincode);
+    printf(" %s \n %d ,  %d \n %s , %d",name,doornum,streetnum,city,pincode);
+    
+}
