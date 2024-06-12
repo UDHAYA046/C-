@@ -1,0 +1,13 @@
+#include <stdio.h>
+main(){
+    int a;
+    int b;
+    int c;
+    printf("enter coeff of x : ");
+    scanf("%d",&a);
+    printf("enter coeff of y : ");
+    scanf("%d",&b);
+    printf("enter constant value : ");
+    scanf("%d",&c);
+    printf("%dx + %dy = %d",a,b,c);
+}
