@@ -1,0 +1,124 @@
+/* write a menu driven program to calculate volume and area of different shapes  */
+#include<stdio.h>
+#include<string.h>
+# define pi 3.14
+void main(){
+    char ans[3];
+    printf("do you want to continue (y or n) : ");
+    scanf("%2s",ans);
+    while (strncmp(ans,"y",3)==0){
+        char ch1[3];
+        printf("A.area\nB.volume");
+        printf("enter your choice A or B : \n");
+        scanf("%s",&ch1);
+        if (strncmp(ch1,"A",3)==0){
+            char ch2[3];
+            printf(" a1.circle\na2.rectangle\na3.suare\n");
+            printf("enter your choice a1 or a2 or a3 : ");
+            scanf("%2s",ch2);
+            float Ar;
+            if (strncmp(ch2,"a1",3)==0){
+                float r;
+                printf("enetr radius of the circle : ");
+                scanf("%f", &r);
+                Ar=pi*r*r;
+                printf("Area of given circle is :%f\n",Ar);
+            }
+            else if (strncmp(ch2,"a2",3)==0){
+                float l;
+                float b;
+                printf("enetr length of rectangle : ");
+                scanf("%f", &l);
+                printf("enetr breadth of rectangle : ");
+                scanf("%f", &b);
+                Ar=l*b;
+                printf("Area of given rectangle is :%f\n",Ar);
+            }
+            else if (strncmp(ch2,"a3",3)==0){
+                float s;
+                printf("enetr side of the square : ");
+                scanf("%f", &s);
+                Ar=s*s;
+                printf("Area of given square is : %f\n",Ar);
+            }
+            else{
+                printf("invalid choice of area");
+                break;
+            }
+        }
+
+        else if (strncmp(ch1,"B",3)==0){
+            char ch3;
+            printf(" v1.ciube\nv2.cuboid\nv3.cylinder\nv4.cone\nv5.sphere\nv6.hemisphere");
+            printf("enter your choice v1 or v2 or v3 or v4 or v5 or v6 : ");
+            scanf("%2s",  ch3);
+            float vlm;
+            if (strncmp(ch3,"v1",3)==0){
+                float s;
+                printf("enetr side of the cube : ");
+                scanf("%f", &s);
+                vlm=s*s*s;
+                printf("volume of cube is  : %f\n ",vlm);
+            }
+            else if (strncmp(ch3,"v2",3)==0){
+                float l;
+                float b;
+                float h;
+                printf("enetr length of cuboid : ");
+                scanf("%f", &l);
+                printf("enetr breadth of cuboid : ");
+                scanf("%f", &b);
+                printf("enetr height of cuboid : ");
+                scanf("%f", &h);
+                vlm=l*b*h;
+                printf("volume of cuboid is  :%f \n",vlm);
+            }
+            else if (strncmp(ch3,"v3",3)==0){
+                float r1;
+                printf("enetr radius of the cylinder : ");
+                scanf("%f", &r1);
+                float h1;
+                printf("enetr height of the cylinder : ");
+                scanf("%f", &h1);
+                vlm=pi*r1*r1*h1;
+                printf("volume of cylinder is  : %f \n",vlm);
+            }
+            else if (strncmp(ch3,"v4",3)==0){
+                float r2;
+                printf("enetr radius of the cone : ");
+                scanf("%f", &r2);
+                float h2;
+                printf("enetr height of the cone : ");
+                scanf("%f", &h2);
+                vlm=(1/3)*pi*r2*r2*h2;
+                printf("volume of cone is  :%f \n",vlm);
+            }
+            else if (strncmp(ch3,"v5",3)==0){
+                float r3;
+                printf("enetr radius of the sphere : ");
+                scanf("%f", &r3);
+                vlm=(4/3)*pi*r3*r3*r3;
+                printf("volume of sphere is  : %f \n",vlm);
+            }
+            else if (strncmp(ch3,"v6",3)==0){
+                float r4;
+                printf("enetr radius of the sphere : ");
+                scanf("%f", &r4);
+                vlm=(2/3)*pi*r4*r4*r4;
+                printf("volume of sphere is  :%f \n",vlm);
+            }
+            else {
+                printf("invalid choice of volume ");
+                break;
+
+            }
+
+        }
+
+        else{
+            printf("invalid option entered ");
+            break;
+        }
+    }
+
+}
